@@ -1,0 +1,302 @@
+/* ================= Variables (ตัวแปรสี) ================= */
+:root {
+    --bg-dark: #050510;
+    --bg-sec: #1A1A40;
+    --purple-glow: #8E2DE2;
+    --blue-glow: #4A00E0;
+    --neon-blue: #00E5FF;
+    --text-main: #FFFFFF;
+    --text-muted: #B3B3CC;
+}
+
+/* ================= Reset & Base ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+    /* สร้างพื้นหลังจุดดวงดาวเบาๆ */
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #ffffff80, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, #ffffff80, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #ffffff80, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 120px, #ffffff80, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+}
+
+/* ================= Mouse Glow Effect ================= */
+#mouse-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(74, 0, 224, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none; /* ทำให้คลิกทะลุได้ */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: transform 0.05s linear;
+}
+
+/* ================= Navbar (Glassmorphism) ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(26, 26, 64, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+/* เส้นใต้เรืองแสงตอน Hover */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue);
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+/* ================= Hero Section ================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 20px 20px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.greeting {
+    color: var(--neon-blue);
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.neon-text {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.neon-text span {
+    background: linear-gradient(to right, var(--neon-blue), var(--purple-glow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(142, 45, 226, 0.5);
+}
+
+.role {
+    font-size: 24px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+/* ================= Buttons ================= */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--neon-blue);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 30px var(--neon-blue);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--neon-blue);
+    border: 2px solid var(--neon-blue);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 229, 255, 0.1);
+    box-shadow: 0 0 15px var(--neon-blue);
+    transform: translateY(-3px);
+}
+
+/* ================= Hero Image & Animations ================= */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.glow-ring {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(142, 45, 226, 0.2) 0%, rgba(0,0,0,0) 70%);
+    box-shadow: 0 0 50px rgba(0, 229, 255, 0.3);
+    animation: pulse 4s infinite alternate;
+}
+
+.floating-avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(0, 229, 255, 0.5);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+    animation: float 5s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Keyframes สำหรับลอยขึ้นลง */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Keyframes สำหรับไฟกระพริบ */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+
+/* ================= Footer ================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+    background: rgba(5, 5, 16, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ================= Responsive (มือถือ) ================= */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .description {
+        margin: 0 auto 30px auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .neon-text {
+        font-size: 36px;
+    }
+
+    .floating-avatar {
+        width: 250px;
+        height: 250px;
+    }
+}
