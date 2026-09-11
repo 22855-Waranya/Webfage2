@@ -3,61 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - [กรอกชื่อ]</title>
-    <!-- เรียกใช้ Font จาก Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- เรียกใช้ไฟล์ CSS -->
+    <title>My Space | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- เอฟเฟกต์แสงตามเมาส์ -->
-    <div id="mouse-glow"></div>
 
-    <!-- Navigation Bar -->
+    <div class="space-background">
+        <div class="stars"></div>
+        <div class="planet planet-one"></div>
+        <div class="planet planet-two"></div>
+        <div class="black-hole"></div>
+        <div class="mouse-glow"></div>
+    </div>
+
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Space<span>Port.</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">หน้าแรก</a></li>
-                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
-                <li><a href="education.html">การศึกษา</a></li>
-                <li><a href="hobby.html">งานอดิเรก</a></li>
-                <li><a href="contact.html">ติดต่อ</a></li>
-            </ul>
+        <a href="index.html" class="logo">MY<span>SPACE</span></a>
+
+        <div class="nav-links">
+            <a href="index.html" class="active">หน้าแรก</a>
+            <a href="profile.html">ประวัติส่วนตัว</a>
+            <a href="education.html">การศึกษา</a>
+            <a href="hobby.html">งานอดิเรก</a>
+            <a href="contact.html">ติดต่อ</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-container">
-            <div class="hero-text">
-                <p class="greeting">สวัสดีผู้มาเยือนจากต่างดาว 👽</p>
-                <h1 class="neon-text">ผมชื่อ <br> <span>[กรอกชื่อ-นามสกุล]</span></h1>
-                <h2 class="role">นักเรียนชั้น ม.3 / [กรอกห้อง]</h2>
-                <p class="description">
-                    ยินดีต้อนรับสู่สถานีอวกาศส่วนตัวของผม! ผมมีความสนใจในด้านเทคโนโลยี คอมพิวเตอร์ และการพัฒนาเว็บไซต์ นี่คือพื้นที่รวบรวมผลงานและตัวตนของผม
-                </p>
-                <div class="hero-buttons">
-                    <a href="profile.html" class="btn btn-primary">สำรวจตัวตนของฉัน</a>
-                    <a href="hobby.html" class="btn btn-secondary">ดูงานอดิเรก</a>
+    <main class="hero-section container">
+
+        <div class="hero-content">
+            <div class="eyebrow">
+                <span class="status-dot"></span>
+                WELCOME TO MY UNIVERSE
+            </div>
+
+            <h1>
+                Hello,<br>
+                I'm <span class="gradient-text">[กรอกชื่อ]</span>
+            </h1>
+
+            <p class="hero-description">
+                นักเรียนชั้นมัธยมศึกษาปีที่ 3
+                ผู้หลงใหลในการเรียนรู้ เทคโนโลยี
+                และการสร้างสรรค์สิ่งใหม่ ๆ
+            </p>
+
+            <p class="hero-quote">
+                “Every great journey begins with a single idea.”
+            </p>
+
+            <div class="hero-buttons">
+                <a href="profile.html" class="btn btn-primary">
+                    สำรวจตัวตนของฉัน
+                    <span>↗</span>
+                </a>
+
+                <a href="hobby.html" class="btn btn-outline">
+                    ดูงานอดิเรก
+                    <span>→</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <strong>03</strong>
+                    <small>GRADE</small>
+                </div>
+                <div>
+                    <strong>∞</strong>
+                    <small>DREAMS</small>
+                </div>
+                <div>
+                    <strong>01</strong>
+                    <small>MISSION</small>
                 </div>
             </div>
-            
-            <div class="hero-image">
-                <!-- วงแหวนตกแต่ง (Glow Effect) -->
-                <div class="glow-ring"></div>
-                <!-- รูปโปรไฟล์ (Placeholder) -->
-                <img src="https://via.placeholder.com/300/1A1A40/00E5FF?text=My+Profile" alt="Profile Picture" class="floating-avatar">
+        </div>
+
+        <div class="hero-visual">
+            <div class="orbit orbit-large"></div>
+            <div class="orbit orbit-small"></div>
+
+            <div class="profile-frame">
+                <div class="profile-placeholder">
+                    <span class="profile-icon">👨‍🚀</span>
+                    <span>PROFILE IMAGE</span>
+                </div>
+            </div>
+
+            <div class="floating-card card-top">
+                <span>✦</span>
+                <div>
+                    <strong>CREATIVE MIND</strong>
+                    <small>Always exploring</small>
+                </div>
+            </div>
+
+            <div class="floating-card card-bottom">
+                <span>◈</span>
+                <div>
+                    <strong>MISSION STATUS</strong>
+                    <small>Ready to learn</small>
+                </div>
             </div>
         </div>
-    </header>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Space Portfolio by [กรอกชื่อ]. All rights reserved.</p>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 [กรอกชื่อ] · Student Space Portfolio</p>
+        <span>DESIGNED WITH CURIOSITY ✦</span>
     </footer>
 
-    <!-- เรียกใช้ไฟล์ JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
